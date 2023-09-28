@@ -28,12 +28,7 @@ packages = [{include = "@package@"}]
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinor@"
 pythoneda-shared-artifact-changes-events = "^@pythonedaSharedArtifactChangesEvents@"
-pythoneda-shared-artifact-changes-shared = "^@pythonedaSharedArtifactChangesShared@"
-pythoneda-shared-code-requests-events = "^@pythonedaSharedCodeRequestsEvents@"
-pythoneda-shared-code-requests-shared = "^@pythonedaSharedCodeRequestsShared@"
-pythoneda-shared-git-shared = "^@pythonedaSharedGitShared@"
 pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomain@"
-stringtemplate3 = "^@stringtemplate3@"
 
 [build-system]
 requires = ["poetry-core"]
