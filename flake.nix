@@ -49,8 +49,8 @@
       let
         org = "pythoneda-realm-unveilingpartner";
         repo = "realm";
-        version = "0.0.3";
-        sha256 = "1gnqbgkgb1ana7478wsx5a2a5680x76z3d128pyfpj8p1qxvf5gx";
+        version = "0.0.4";
+        sha256 = "1xj4f2dq41j2z93hvwfhkwjvr5w0darywvm8gpgvz32zpny1xg6s";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.realm.unveilingpartner";
         pkgs = import nixos { inherit system; };
