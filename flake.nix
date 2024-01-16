@@ -28,7 +28,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url = "github:pythoneda-shared-artifact-def/events/0.0.25";
+      url = "github:pythoneda-shared-artifact-def/events/0.0.26";
     };
     pythoneda-shared-pythoneda-banner = {
       inputs.flake-utils.follows = "flake-utils";
@@ -49,8 +49,8 @@
       let
         org = "pythoneda-realm-unveilingpartner";
         repo = "realm";
-        version = "0.0.5";
-        sha256 = "0gk8lm6yqzh9skgnarb5r95az8xcrrqajkfz53zmgqvdrl3ckmgd";
+        version = "0.0.6";
+        sha256 = "19jsdhyqbxqycifr0bcqd1kkyzkz5ycl5hnjszmvxpvzvagic7s3";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.realm.unveilingpartner";
         pkgs = import nixos { inherit system; };
