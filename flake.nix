@@ -28,19 +28,19 @@
         "pythoneda-shared-banner";
       inputs.pythoneda-shared-domain.follows =
         "pythoneda-shared-domain";
-      url = "github:pythoneda-shared-artifact-def/events/0.0.29";
+      url = "github:pythoneda-shared-artifact-def/events/0.0.30";
     };
     pythoneda-shared-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-def/banner/0.0.43";
+      url = "github:pythoneda-shared-def/banner/0.0.46";
     };
     pythoneda-shared-domain = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-banner.follows =
         "pythoneda-shared-banner";
-      url = "github:pythoneda-shared-def/domain/0.0.25";
+      url = "github:pythoneda-shared-def/domain/0.0.26";
     };
   };
   outputs = inputs:
@@ -49,8 +49,8 @@
       let
         org = "pythoneda-realm-unveilingpartner";
         repo = "realm";
-        version = "0.0.6";
-        sha256 = "19jsdhyqbxqycifr0bcqd1kkyzkz5ycl5hnjszmvxpvzvagic7s3";
+        version = "0.0.7";
+        sha256 = "11h1b6y65nayplsy2xd86xdxc17b4jc0ady5s5sy2a4bggs7c1z0";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.realm.unveilingpartner";
         pkgs = import nixos { inherit system; };
