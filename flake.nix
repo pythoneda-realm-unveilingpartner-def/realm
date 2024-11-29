@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {
-  description = "Realm for pythoneda-realm-unveilingpartner";
+  description = "Nix flake for pythoneda-realm-unveilingpartner/realm";
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";
@@ -136,25 +136,7 @@
       in rec {
         defaultPackage = packages.default;
         devShells = rec {
-          default = pythoneda-realm-unveilingpartner-realm-default;
-          pythoneda-realm-unveilingpartner-realm-default =
-            pythoneda-realm-unveilingpartner-realm-python312;
-          pythoneda-realm-unveilingpartner-realm-python38 =
-            shared.devShell-for {
-              banner = "${
-                  pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python38
-                }/bin/banner.sh";
-              extra-namespaces = "";
-              nixpkgs-release = nixpkgsRelease;
-              package =
-                packages.pythoneda-realm-unveilingpartner-realm-python38;
-              python = pkgs.python38;
-              pythoneda-shared-pythonlang-banner =
-                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python38;
-              pythoneda-shared-pythonlang-domain =
-                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python38;
-              inherit archRole layer org pkgs repo space;
-            };
+          default = pythoneda-realm-unveilingpartner-realm-python312;
           pythoneda-realm-unveilingpartner-realm-python39 =
             shared.devShell-for {
               banner = "${
@@ -219,19 +201,25 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
               inherit archRole layer org pkgs repo space;
             };
+          pythoneda-realm-unveilingpartner-realm-python313 =
+            shared.devShell-for {
+              banner = "${
+                  pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python313
+                }/bin/banner.sh";
+              extra-namespaces = "";
+              nixpkgs-release = nixpkgsRelease;
+              package =
+                packages.pythoneda-realm-unveilingpartner-realm-python313;
+              python = pkgs.python313;
+              pythoneda-shared-pythonlang-banner =
+                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python313;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python313;
+              inherit archRole layer org pkgs repo space;
+            };
         };
         packages = rec {
-          default = pythoneda-realm-unveilingpartner-realm-default;
-          pythoneda-realm-unveilingpartner-realm-default =
-            pythoneda-realm-unveilingpartner-realm-python312;
-          pythoneda-realm-unveilingpartner-realm-python38 =
-            pythoneda-realm-unveilingpartner-realm-for {
-              python = pkgs.python38;
-              pythoneda-shared-artifact-events =
-                pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python38;
-              pythoneda-shared-pythonlang-domain =
-                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python38;
-            };
+          default = pythoneda-realm-unveilingpartner-realm-python312;
           pythoneda-realm-unveilingpartner-realm-python39 =
             pythoneda-realm-unveilingpartner-realm-for {
               python = pkgs.python39;
@@ -263,6 +251,14 @@
                 pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python312;
               pythoneda-shared-pythonlang-domain =
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
+            };
+          pythoneda-realm-unveilingpartner-realm-python313 =
+            pythoneda-realm-unveilingpartner-realm-for {
+              python = pkgs.python313;
+              pythoneda-shared-artifact-events =
+                pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python313;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python313;
             };
         };
       });
